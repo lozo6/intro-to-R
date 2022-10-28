@@ -253,3 +253,89 @@ str(expression)
 expression <- factor(expression, levels=c("low", "medium", "high"))     # you can re-factor a factor 
 
 str(expression)
+
+
+# Packages and Libraries
+sessionInfo()
+
+search()
+
+install.packages("ggplot2")
+
+library(ggplot2)
+
+# Data wrangling: data frames, matrices and lists
+# Extract value 'Wt'
+metadata[1, 1]
+
+# Extract value '1'
+metadata[1, 3] 
+
+# Extract third row
+metadata[3, ] 
+
+# Extract third column
+metadata[ , 3]   
+
+# Extract third column as a data frame
+metadata[ , 3, drop = FALSE] 
+
+# Dataframe containing first two columns
+metadata[ , 1:2] 
+
+# Data frame containing first, third and sixth rows
+metadata[c(1,3,6), ] 
+
+# Extract the celltype column for the first three samples
+metadata[c("sample1", "sample2", "sample3") , "celltype"] 
+
+# Check column names of metadata data frame
+colnames(metadata)
+
+# Check row names of metadata data frame
+rownames(metadata)
+
+# Extract the genotype column
+metadata$genotype 
+
+# Extract the first five values/elements of the genotype column
+metadata$genotype[1:5]
+
+metadata$celltype == "typeA"
+
+logical_idx <- metadata$celltype == 'typeA'
+
+metadata[logical_idx, ]
+
+which(metadata$celltype == "typeA")
+
+idx <- which(metadata$celltype == "typeA")
+
+metadata[idx, ]
+
+which(metadata$replicate > 1)
+
+idx <- which(metadata$replicate > 1)
+
+metadata[idx, ]
+
+metadata[which(metadata$replicate > 1), ]
+
+sub_meta <- metadata[which(metadata$replicate > 1), ]
+
+list1[[2]]
+
+comp2 <- list1[[2]]
+class(comp2)
+
+list1[[1]]
+
+list1[[1]][1]
+
+names(list1) 
+
+names(list1) <- c("species", "df", "number")
+
+names(list1)
+
+list1$df
