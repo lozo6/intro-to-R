@@ -50,7 +50,7 @@ mean(some_numbers)
 # read.xlsx() for Excel files (from the readxl package)
 # read.dta13() for dat files (from the readstata13 package)
 # read.table() for huge datasets
-paygap <- read.csv("C:/Users/loren/OneDrive/Documents/AHI Masters/HHA 507/intro-to-R/data/gender-paygap-2022.csv", header = TRUE)
+paygap <- read.csv("./data/gender-paygap-2022.csv", header = TRUE)
 
 # 2.2.1 Viewing data
 head(paygap, n = 5)
@@ -80,3 +80,7 @@ dim(paygap)
 class(paygap)
 
 class(paygap$DiffMeanHourlyPercent)
+
+# 3.1 Wrangling Data
+
+
